@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 
 
-function Products() {
+function Product() {
     const [products , setProducts] = useState ([])
     useEffect(() => {
       async function fetchData() {
@@ -20,17 +20,20 @@ function Products() {
   
   
     return (
-        <div id='products'>
+        <div id='product'>
           {products.length === 0 ? (
             <p>No products available</p>
           ) : (
             products.map((product) => (
-              <div key={product.id} className='product'>
+              <div key={product} className='product'>
+                        <div className='info'>
+
                 <h2>{product.attributes.title}</h2>
-                <p>{product.attributes.company}</p>
+                <h3>{product.attributes.company}</h3>
                 <p>${product.attributes.description}</p>
                 <img src={product.attributes.image} alt="" />
                 
+              </div>
               </div>
             ))
           )}
@@ -38,4 +41,4 @@ function Products() {
       );
     }
 
-export default Products
+export default Product
