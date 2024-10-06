@@ -1,12 +1,16 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { ecomContext } from '../Pages/App';
 
 
 
 
 
 function Product() {
-    const [products , setProducts] = useState ([])
+  const {products , setProducts} = useContext(ecomContext)
+  const {addProductToCart , isProductAddedToCart} = useContext(ecomContext)
+
     useEffect(() => {
       async function fetchData() {
         const result = await axios("https://strapi-store-server.onrender.com/api/products");
@@ -19,7 +23,7 @@ function Product() {
   
   
   
-    return (
+    return (  
         <div id='product'>
           {products.length === 0 ? (
             <p>No products available</p>
@@ -32,6 +36,8 @@ function Product() {
                 <h3>{product.attributes.company}</h3>
                 <p>${product.attributes.description}</p>
                 <img src={product.attributes.image} alt="" />
+                <Link to="" onClick={() => addProductToCart(product)}>Add to Cart</Link>
+
                 
               </div>
               </div>

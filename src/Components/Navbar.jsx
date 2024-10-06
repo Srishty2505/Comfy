@@ -5,12 +5,13 @@ function Navbar() {
     return (
         <>
             <header>
-                <h2><Link to="/">Ecommerce</Link></h2>
+                <h2><Link to="/">C</Link></h2>
                 <ul>
-                    <li><Link to="">Home</Link></li>
-                    <li><Link to="">About</Link></li>
-                    <li><Link to="">Cart</Link></li>
-                    <li><Link to="">Login</Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/cart">Cart</Link></li>
+                    <li><Link to="/products">Products</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
             </header>
         </>
