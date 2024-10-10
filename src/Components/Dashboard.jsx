@@ -14,7 +14,7 @@ function Dashboard() {
    {
     try {
       await signOut(auth);
-      // Redirect to login page after successful logout
+      
       navigate("/");
     }
      catch (error) {

@@ -54,7 +54,7 @@ function FeaturedProducts() {
                             <h1>{product.attributes.title}</h1>
                             <h2>{product.attributes.company}</h2>
                             <p>{product.attributes.description}</p>
-                            <p>${product.attributes.price}</p>
+                            <p>${product.attributes.price /100}</p>
                         </div>
 
 

@@ -89,8 +89,8 @@ function Contactus() {
           <button type="submit">Send Message</button>
           </form>
 
-          {errormessage && <p className="error">{errormessage}</p>}
-            {donemessage && <p className="success">{donemessage}</p>} 
+          {<p className="error">{errormessage}</p>}
+            {<p className="success">{donemessage}</p>} 
         
    </>
   )

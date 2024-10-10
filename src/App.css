@@ -67,6 +67,7 @@
     .product p {
       text-align: center;
       align-items: center;
+      margin-top: 10px;
       
     }
     ul {
@@ -180,15 +181,44 @@
     transition: border-color 0.25s;
     color: #fff;
   }
+ 
 
   main {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px; 
-    max-width: 1200px; 
-    margin: 0 auto; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 10px;
+}
+.cartbtn {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 6px;
+}
+.cartqty button {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 6px;
+}
+.right a
+{
+  height: 41px;
+    width: 110px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+
 }
 
   button:hover {
@@ -243,10 +273,24 @@ h2 {
   display: flex; 
   flex-direction: column; 
 }
+.contactpage p
+{
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 6px;
+}
 
 .loginpage {
   display: flex; 
   flex-direction: column; 
+}
+.greeting button
+{
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 6px;
 }
 input[type="text"],
 input[type="email"],

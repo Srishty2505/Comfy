@@ -14,7 +14,7 @@ function cartQty({ productID }) {
 
         <button onClick={() => decrement(productID)}>-</button>
       </div>
-      <MdRemoveShoppingCart onClick={() => handleRemoveFromCart(productID)} />
+      <MdRemoveShoppingCart  className="cartbtn"  onClick={() => handleRemoveFromCart(productID)} />
 
     </div>
   )

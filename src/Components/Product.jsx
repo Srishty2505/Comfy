@@ -38,7 +38,7 @@ function Product() {
 
               <h5>{product.attributes.title}</h5>
               {/* <p><span>{product.attributes.description}</span></p> */}
-              <p><span>${product.attributes.price}</span></p>
+              <p><span>${product.attributes.price/100}</span></p>
               {isProductAddedToCart(product) ? (
                 <CartQty productID={product.id} />
               ) : (

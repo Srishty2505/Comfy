@@ -32,8 +32,8 @@ function SingleProduct() {
                     <div className="right">
                         <h3>{displayedProduct.attributes.title}</h3>
                         <p>Category: {displayedProduct.attributes.category}</p>
-                        <p>Price: <strong>{displayedProduct.attributes.price}</strong></p>
-                        <Link to="#" onClick={() => addProductToCart(displayedProduct)}>Add to Cart</Link>
+                        <p>Price: <strong>{displayedProduct.attributes.price/100}</strong></p>
+                        {/* <Link to="#" onClick={() => addProductToCart(displayedProduct)}>Add to Cart</Link> */}
                         {/* <CartQty productID={displayedProduct.id} /> */}
                     </div>
                 </div>

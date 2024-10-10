@@ -42,7 +42,7 @@ function Cart() {
                       <div className='right'>
                         <h4>{item.attributes.title}</h4>
                         {/* <h4>{item.attributes.description}</h4> */}
-                        <p>Price: <FaRupeeSign />{item.attributes.price}</p>
+                        <p>Price: <FaRupeeSign />{item.attributes.price /100}</p>
                         <CartQty productID= {item.id}/>
                       </div>
                     </div>
@@ -54,7 +54,7 @@ function Cart() {
               <ul>
                 <li>
                   <span>Items:</span>
-                  <span>{carttotal}</span>
+                  <span>{carttotal/100}</span>
                 </li>
                 <li>
                   <span>Delivery:</span>
@@ -64,7 +64,7 @@ function Cart() {
               <hr />
               <h3>
                 <span>Your Total :</span>
-                <span>{(Number(carttotal) + Number(deliveryfees)).toFixed(2)}</span>
+                <span>{(Number(carttotal /100) + Number(deliveryfees)).toFixed(2)}</span>
               </h3>
 
             </div>
