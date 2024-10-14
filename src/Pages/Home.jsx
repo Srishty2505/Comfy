@@ -3,7 +3,12 @@ import FeaturedProducts from '../Components/FeaturedProducts'
 
 function Home() {
   return (
- <FeaturedProducts></FeaturedProducts>
+
+    <div className='parent'>
+         <FeaturedProducts />
+       
+    </div>
+
   )
 }
 

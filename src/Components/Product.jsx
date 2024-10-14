@@ -30,9 +30,14 @@ function Product() {
         <p>No products available</p>
       ) : (
         products.map((product) => (
+          
           <div key={product.id} className='product'>
-            <Link to={`${product.id}`}>
-              <img src={product.attributes.image} alt={product.attributes.title} />
+
+             <Link to={`${product.id}`}>
+             <div className='pimage'>
+             <img src={product.attributes.image} alt={product.attributes.title} />
+             </div>
+          
             </Link>
             <div className='info'>
 
@@ -45,7 +50,10 @@ function Product() {
                 <Link to="" onClick={() => addProductToCart(product)}>Add to Cart</Link>
               )}
             </div>
+
           </div>
+           
+       
         ))
       )}
     </div>

@@ -25,7 +25,13 @@ function Cart() {
 
   return (
     <>
-      <h1>Shopping cart</h1>
+    <div className='cartmain'>
+
+   
+    <div className='carth1' >
+    <h1 className='shoppings'>Shopping cart</h1>
+    </div>
+      
       {
         cart.length > 0 ?
 
@@ -36,13 +42,13 @@ function Cart() {
                   return (
                     <div className='cartitem' key={item.id}>
                       <div className='left'>
-                        <img src={item.attributes.image} alt="Cart Item Image" />
+                        <img src={item.attributes.image} alt="Cart Item" />
 
                       </div>
                       <div className='right'>
                         <h4>{item.attributes.title}</h4>
                         {/* <h4>{item.attributes.description}</h4> */}
-                        <p>Price: <FaRupeeSign />{item.attributes.price /100}</p>
+                        <p>Price: <FaRupeeSign />{(item.attributes.price /100).toFixed(2)}</p>
                         <CartQty productID= {item.id}/>
                       </div>
                     </div>
@@ -69,8 +75,9 @@ function Cart() {
 
             </div>
           </div> :
-          <h2>Your cart is empty. <Link to="/"> Go Shopping</Link></h2>
+          <h2 className="cmsg">Your cart is empty. <Link to="/"> Go Shopping</Link></h2>
       }
+       </div>
     </>
   )
 }

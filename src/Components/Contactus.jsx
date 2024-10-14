@@ -23,6 +23,9 @@ function Contactus() {
     
       const handleSubmit = async  (e) => {
         e.preventDefault();
+        seterrormessage("")
+        setdonemessage("")
+        
         if (!formdata.username || !formdata.useremail || !formdata.message) {
           seterrormessage('ERROR!!!');
           return;
@@ -31,7 +34,10 @@ function Contactus() {
 
         if (docRef) {
             setdonemessage('Your message has been sent successfully!');
-            setformdata({ username: '', useremail: '', website: '', message: '' }); // Reset form
+
+            
+            setformdata({ username: '', useremail: '', website: '', message: '' }); 
+            
         } else {
             seterrormessage('There was an error sending your message. Please try again later.');
         };
@@ -45,6 +51,10 @@ function Contactus() {
 
   return (
    <>
+   <div className='contactmain'>
+    
+
+
     <form action="" onSubmit={handleSubmit}  className="contactpage" >
           
     <input
@@ -54,7 +64,7 @@ function Contactus() {
           value={formdata.username}
           placeholder="Enter your name"
           onChange={handleChange}
-          
+
         />
           <br />
           <input
@@ -87,10 +97,12 @@ function Contactus() {
 
 
           <button type="submit">Send Message</button>
+          { errormessage &&<p className="error">{errormessage}</p>}
+          { donemessage &&<p className="success">{donemessage}</p>} 
           </form>
+          </div>
 
-          {<p className="error">{errormessage}</p>}
-            {<p className="success">{donemessage}</p>} 
+         
         
    </>
   )

@@ -6,8 +6,17 @@ function Loginpage() {
   return (
     <>
 
-      <Login/>
-      <Register/>
+<div className='mainboxx'>
+<div className='one'>
+    <Login/>
+    </div>
+      
+      <div className='reg'>
+        <Register/>
+      </div>
+</div>
+   
+      
 </>
   )
 }

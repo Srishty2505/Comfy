@@ -15,7 +15,7 @@ const {cart} = useContext(ecomContext)
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/cart">Cart<span>{cart.length}</span></Link></li>
+                    <li><Link to="/cart">Cart<span> {   cart.length}</span></Link></li>
                     <li><Link to="/products">Products</Link></li>
                     <li><Link to="/loginpage">Login</Link></li>
                     <li><Link to="/contactus">Contact US</Link></li>

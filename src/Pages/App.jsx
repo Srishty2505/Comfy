@@ -15,6 +15,7 @@ import Dashboard from '../Components/Dashboard'
 import Contactus from '../Components/Contactus'
 
 
+
 export const ecomContext = createContext(null)
 
 
@@ -90,17 +91,17 @@ function App() {
               <Route path='/cart' element={<Cart />} />
               <Route path="/about" element={<About />} />
               <Route path='/products/:id' element={<SingleProduct />} />
-              <Route path='/login' element={<Login />}/>
+              <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/contactus' element={<Contactus />} />
 
-              
+
               <Route path='/loginpage' element={<Loginpage />} />
             </Routes>
           </main>
-        </ecomContext.Provider> 
+        </ecomContext.Provider>
         : ""
       }
     </BrowserRouter>
